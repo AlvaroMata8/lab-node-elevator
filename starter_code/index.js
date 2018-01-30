@@ -5,4 +5,4 @@ const persona = new Person("Mongolin",1,8);
 
 elevator.call(persona);
 elevator.start();
-
+elevator.stop();

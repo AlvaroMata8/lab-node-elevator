@@ -10,7 +10,11 @@ class Elevator {
 
   start() {this.clear = setInterval(() => { this.update(); }, 1000); }
 
-  stop() { clearInterval(this.clear)}
+  stop() { 
+    if(this.waitingList === 0 && this.requests === 0 ){
+      clearInterval(this.clear)
+    }
+  }
 
   update() {
     if(this.direction == "up"){
